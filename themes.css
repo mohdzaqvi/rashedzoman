@@ -1,0 +1,68 @@
+/* Steel Cyan theme — always on (no attribute needed) */
+:root{--bg:#06121c;--surface:rgba(255,255,255,.045);--alt:#081a28;--ink:#e6f4fb;--muted:#8fb0c2;--line:rgba(120,210,245,.18);--primary:#22d3ee;--primary-h:#67e8f9;--on-primary:#04202b;--hl:#22d3ee;--hero-ov:linear-gradient(90deg,rgba(4,16,26,.94),rgba(4,16,26,.7) 45%,rgba(4,16,26,.15));--hero-sub:#7fe3f5;--hero-text:#b4cfdc;--nav:rgba(6,18,28,.75);--nav-ink:#e6f4fb;--foot:#030b12;--foot-ink:#8fb0c2;--icon:linear-gradient(135deg,#22d3ee,#6366f1);--on-icon:#fff;--panel:linear-gradient(145deg,#0b2a3d,#0a1c2b);--panel-ink:#e6f4fb;--field:rgba(255,255,255,.06)}
+
+html body{background:var(--bg);color:var(--ink)}
+html .nav{background:var(--nav)!important;border-bottom-color:var(--line);color:var(--nav-ink)}
+html .nav nav a:hover{background:var(--line);color:var(--hl)}
+html .nav-cta{background:var(--primary)!important;border-color:var(--primary)!important;color:var(--on-primary)!important}
+html #langSwitch{background:transparent!important;color:var(--nav-ink)!important;border-color:var(--line)!important}
+html #progress{background:var(--primary)}
+html .hero{background:var(--bg)}
+html .hero .shade{background:var(--hero-ov),linear-gradient(0deg,var(--bg),transparent 40%)!important}
+html .hero h1 em,html .hero h2{color:var(--hero-sub)}
+html .hero-copy p{color:var(--hero-text)!important}
+html .hero .primary{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+html .hero .primary:hover{background:var(--primary-h);border-color:var(--primary-h)}
+html .hero-cards article,html .location-chip{background:var(--surface);border-color:var(--line);color:var(--ink);backdrop-filter:blur(14px)}
+html .hero-cards span{color:var(--muted)}
+html .location-chip{color:var(--hl)}
+html :is(.hero-cards b,.glass small,.service-card>span){background:var(--icon);color:var(--on-icon)}
+html .intro{background:var(--bg)}
+html .services{background:var(--alt)}
+html .industries{background:var(--bg)}
+html .section h3,html .glass strong,html .service-card h4{color:var(--ink)}
+html .section h3 span,html .kicker{color:var(--hl)!important}
+html :is(.section-copy p,.glass p,.service-card p){color:var(--muted)}
+html :is(.glass,.service-card){background:var(--surface);border-color:var(--line)}
+html :is(.glass:hover,.services .service-card.visible:hover){border-color:var(--primary);box-shadow:0 18px 44px rgba(0,0,0,.18)}
+html .industry-row span{background:var(--surface);border-color:var(--line);color:var(--ink)}
+html .safety-panel{background:var(--surface);border-color:var(--primary)!important}
+html .safety-panel h3{color:var(--ink)}html .safety-panel p{color:var(--muted)}
+html .safety{background:linear-gradient(90deg,rgba(0,0,0,.6),rgba(0,0,0,.1)),url("./safety-industrial.jpg") center 52%/cover}
+html .contact-section{background:var(--bg)!important;color:var(--ink)!important}
+html .contact-details{background:var(--panel)!important;color:var(--panel-ink)!important;border:1px solid var(--line)!important}
+html .contact-section .contact-eyebrow{color:var(--hero-sub)!important}
+html .contact-details h2,html .contact-method a,html .contact-method p{color:var(--panel-ink)}
+html .contact-intro,html .contact-method small{color:var(--hero-text)}
+html .quote-form{background:var(--surface)!important;border-color:var(--line)!important}
+html .quote-form :is(h3,label){color:var(--ink)!important}
+html .quote-form p{color:var(--muted)!important}
+html .quote-form :is(input,select,textarea){background:var(--field)!important;color:var(--ink)!important;border-color:var(--line)!important}
+html .quote-form .quote-submit{background:var(--primary)!important;color:var(--on-primary)!important}
+html .quote-form .quote-whatsapp{background:transparent!important;color:var(--ink)!important;border-color:var(--line)!important}
+html footer{background:var(--foot);color:var(--foot-ink)}
+html footer:before{background:var(--foot)}
+html .nav-cta,html .hero .primary{background:linear-gradient(135deg,#22d3ee,#6366f1)!important;border-color:transparent!important;color:#fff!important}
+html :is(.glass,.service-card){backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+html .section h3 span{background:linear-gradient(90deg,#22d3ee,#818cf8);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+
+@media(max-width:800px){html .nav nav a{background:var(--line);color:var(--nav-ink)}}
+html .safety-panel{background:rgba(6,18,28,.92)!important;backdrop-filter:blur(12px)}
+html .hero .shade,html[dir=rtl] .hero .shade{background:var(--hero-ov),linear-gradient(0deg,var(--bg),transparent 40%)!important}
+html[dir=rtl] .hero .shade{background:linear-gradient(270deg,rgba(4,16,26,.94),rgba(4,16,26,.7) 45%,rgba(4,16,26,.15)),linear-gradient(0deg,var(--bg),transparent 40%)!important}
+html[dir=rtl] .hero-copy{left:auto!important;right:5vw!important}
+
+/* Bigger logo */
+.nav{height:112px!important}
+.brand{width:340px!important;flex-basis:340px!important}
+.brand img{height:100px!important;filter:drop-shadow(0 0 14px rgba(34,211,238,.35))!important}
+@media(max-width:1100px) and (min-width:801px){.brand{width:260px!important;flex-basis:260px!important}.brand img{height:90px!important}}
+@media(max-width:800px){.nav{height:auto!important}.brand{width:min(240px,100%)!important;flex-basis:auto!important}.brand img{height:86px!important}}
+@media(max-width:360px){.brand img{height:74px!important}}
+/* Logo larger still */
+.nav{height:140px!important}
+.brand{width:150px!important;flex-basis:150px!important}
+.brand img{height:128px!important;object-position:center!important}
+@media(max-width:1100px) and (min-width:801px){.nav{height:124px!important}.brand{width:130px!important;flex-basis:130px!important}.brand img{height:112px!important}}
+@media(max-width:800px){.nav{height:auto!important}.brand{width:110px!important}.brand img{height:104px!important;object-position:left center!important}}
+@media(max-width:360px){.brand{width:96px!important}.brand img{height:90px!important}}
